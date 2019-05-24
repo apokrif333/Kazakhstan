@@ -28,8 +28,6 @@ df_gold['Close'] = df_gold.Close.replace('.', float('NaN')).fillna(method='ffill
 df_gold['Close'] = df_gold.Close.astype('float')
 df_gold['Percent'] = np.true_divide(df_gold.Close[1:], df_gold.Close[:-1])
 
-print(df_kase)
-
 all_frames = [df_deposit, df_infla, df_kase, df_meokam, df_reit, df_gold, df_usdkzt]
 
 # Find_oldest_newest_dates
